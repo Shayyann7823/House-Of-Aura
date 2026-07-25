@@ -51,6 +51,12 @@ const TOOLS = [
   },
 ];
 
+// Only the last N messages are sent to Groq — keeps token usage bounded even
+// once a conversation runs long, since the free tier has a strict per-minute
+// token limit. The UI still keeps and shows the full history; this only
+// trims what we forward to the model.
+const MAX_HISTORY_MESSAGES = 8;
+
 export async function POST(req: NextRequest) {
   try {
     const { messages } = await req.json();
@@ -59,7 +65,8 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "GROQ_API_KEY missing in .env.local" }, { status: 500 });
     }
 
-    const baseMessages = [{ role: "system", content: SYSTEM_PROMPT }, ...messages];
+    const trimmedMessages = messages.slice(-MAX_HISTORY_MESSAGES);
+    const baseMessages = [{ role: "system", content: SYSTEM_PROMPT }, ...trimmedMessages];
 
     // 1st call — let the model decide if it has enough info to call the tool
     const first = await callGroq(baseMessages, true);
@@ -118,7 +125,7 @@ function findMentionedProductIds(messages: any[]): string[] {
   return PRODUCTS.filter((p) => text.includes(p.name.toLowerCase())).map((p) => p.id);
 }
 
-async function callGroq(messages: any[], allowTools: boolean) {
+async function callGroq(messages: any[], allowTools: boolean, attempt = 1): Promise<any> {
   const res = await fetch(GROQ_URL, {
     method: "POST",
     headers: {
@@ -132,6 +139,13 @@ async function callGroq(messages: any[], allowTools: boolean) {
       temperature: 0.2,
     }),
   });
+
+  if (res.status === 429 && attempt < 2) {
+    // Brief, one-time retry on a momentary rate-limit hit before failing.
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+    return callGroq(messages, allowTools, attempt + 1);
+  }
+
   if (!res.ok) throw new Error(`Groq error: ${res.status} ${await res.text()}`);
   return res.json();
 }
