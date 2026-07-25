@@ -15,7 +15,7 @@ type ChatMessage = { role: "user" | "assistant"; content: string; look?: Recomme
 
 const INITIAL_MESSAGE: ChatMessage = {
   role: "assistant",
-  content: "Assalam-o-Alaikum! Main aapka Heemia Stylist hoon ✨ Kis occasion ke liye outfit chahiye — Wedding, Eid, Office, Party, ya Casual?",
+  content: "Assalam-o-Alaikum! Main aapka House of Aura Stylist hoon ✨ Kis occasion ke liye outfit chahiye — Wedding, Eid, Office, Party, ya Casual?",
 };
 
 export function StylistChatWidget() {
@@ -76,7 +76,7 @@ export function StylistChatWidget() {
           <div className="flex items-center justify-between px-4 py-3 border-b border-gold/20 bg-primary">
             <div className="flex items-center gap-2">
               <Sparkles className="h-4 w-4 text-gold" />
-              <span className="text-sm uppercase tracking-[0.2em] text-gold">Heemia Stylist</span>
+              <span className="text-sm uppercase tracking-[0.2em] text-gold">House of Aura Stylist</span>
             </div>
             <div className="flex items-center gap-3">
               <button onClick={clearChat} title="Clear chat" className="text-primary-foreground/70 hover:text-gold">

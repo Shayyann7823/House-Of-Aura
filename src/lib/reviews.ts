@@ -72,7 +72,7 @@ export const useUserReviews = create<UserReviewsState>()(
       reviews: [],
       add: (review) => set({ reviews: [review, ...get().reviews] }),
     }),
-    { name: "heemia-user-reviews" }
+    { name: "House of Aura-user-reviews" }
   )
 );
 

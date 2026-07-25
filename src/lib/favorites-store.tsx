@@ -27,6 +27,6 @@ export const useFavorites = create<FavoritesState>()(
       isFavorite: (id) => get().ids.includes(id),
       clear: () => set({ ids: [], count: 0 }),
     }),
-    { name: "heemia-favorites" }
+    { name: "House of Aura-favorites" }
   )
 );

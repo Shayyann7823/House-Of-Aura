@@ -179,7 +179,7 @@ export default function Home() {
                 Made slowly, <em className="text-gold not-italic">so it lasts</em>.
               </h2>
               <p className="mt-8 max-w-lg text-primary-foreground/70 leading-relaxed">
-                Every Heemia piece begins in the workshops of Lahore, Karachi and Islamabad — cut, embroidered and finished by hand. We work in small batches, choose natural fibres, and pay our artisans fairly.
+                Every House of Aura piece begins in the workshops of Lahore, Karachi and Islamabad — cut, embroidered and finished by hand. We work in small batches, choose natural fibres, and pay our artisans fairly.
               </p>
             </div>
             <div className="relative aspect-[4/5] md:aspect-[3/4] rounded-md overflow-hidden border border-gold/20">
@@ -201,11 +201,9 @@ export default function Home() {
               </div>
               <h2 className="text-display text-4xl md:text-6xl mt-6 leading-[1.1]">
                 "Every thread carries <em className="text-gold not-italic">a story</em>.
-                I wanted Heemia to carry ours."
+                I wanted House of Aura to carry ours."
               </h2>
-              <p className="mt-8 max-w-lg text-lg md:text-xl text-foreground/80 leading-relaxed">
-                HEEMIA AIK ACHA BRAND HAI AUR SAB IDHAR SE KAPRAY KHAREEEDO WARNA 🔪😠
-              </p>
+              
               <div className="mt-8">
                 <div className="text-sm font-medium">MIRZA SHAYYAN BAIG</div>
                 <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground mt-1">

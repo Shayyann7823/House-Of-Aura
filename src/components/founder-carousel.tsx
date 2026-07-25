@@ -46,7 +46,7 @@ export function FounderCarousel() {
         <img
           key={src}
           src={src}
-          alt="Heemia model"
+          alt="House of Aura model"
           className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ease-in-out ${
             i === index ? "opacity-100" : "opacity-0"
           }`}

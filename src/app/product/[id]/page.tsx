@@ -13,8 +13,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { id } = await params;
   const product = getProduct(id);
   return {
-    title: product ? `${product.name} — Heemia` : "Product — Heemia",
-    description: product ? `${product.description} ${formatPKR(product.price)}` : "Shop Heemia.",
+    title: product ? `${product.name} — House of Aura` : "Product — House of Aura",
+    description: product ? `${product.description} ${formatPKR(product.price)}` : "Shop House of Aura.",
   };
 }
 

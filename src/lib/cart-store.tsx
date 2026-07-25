@@ -16,7 +16,7 @@ type Ctx = {
 };
 
 const CartContext = createContext<Ctx | null>(null);
-const STORAGE_KEY = "heemia-cart-v2";
+const STORAGE_KEY = "House of Aura-cart-v2";
 
 // A cart line is unique per product id + size (same product, different size = separate line).
 const lineKey = (id: string, size?: string) => (size ? `${id}::${size}` : id);

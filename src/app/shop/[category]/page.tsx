@@ -13,8 +13,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { category } = await params;
   const c = getCategory(category as Category);
   return {
-    title: `${c?.label ?? "Shop"} — Heemia`,
-    description: c?.blurb ?? "Shop Heemia.",
+    title: `${c?.label ?? "Shop"} — House of Aura`,
+    description: c?.blurb ?? "Shop House of Aura.",
   };
 }
 

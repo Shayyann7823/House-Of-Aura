@@ -3,12 +3,12 @@ import "./globals.css";
 import { Providers } from "./providers";
 
 export const metadata: Metadata = {
-  title: "Heemia — Pakistani Luxury Clothing & Accessories",
+  title: "House of Aura — Pakistani Luxury Clothing & Accessories",
   description:
-    "Heemia is a modern Pakistani clothing house — eastern & western wear for women, men and kids, plus jewellery, perfumes and accessories.",
-  authors: [{ name: "Heemia" }],
+    "House of Aura is a modern Pakistani clothing house — eastern & western wear for women, men and kids, plus jewellery, perfumes and accessories.",
+  authors: [{ name: "House of Aura" }],
   openGraph: {
-    title: "Heemia — Pakistani Luxury Clothing & Accessories",
+    title: "House of Aura — Pakistani Luxury Clothing & Accessories",
     description: "Timeless Pakistani craft, modern silhouettes.",
     type: "website",
   },

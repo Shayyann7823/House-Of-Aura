@@ -45,7 +45,7 @@ export const useOrders = create<OrdersState>()(
       lastCustomer: null,
       addOrder: (order) => set({ orders: [order, ...get().orders], lastCustomer: order.customer }),
     }),
-    { name: "heemia-orders" }
+    { name: "House of Aura-orders" }
   )
 );
 

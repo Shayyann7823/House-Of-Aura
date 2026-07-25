@@ -127,7 +127,7 @@ export function SiteHeader({ transparent = true }: { transparent?: boolean }) {
           }}
           className="text-display text-2xl md:text-3xl font-semibold tracking-tight"
         >
-          HEEMIA
+          House of Aura
         </Link>
 
 
@@ -179,15 +179,6 @@ export function SiteHeader({ transparent = true }: { transparent?: boolean }) {
               className="hover:text-gold transition-colors"
             >
               Jewellery
-            </Link>
-
-
-            {/* NEW VIRTUAL TRY ON LINK */}
-            <Link
-              href="/try-on"
-              className="hover:text-gold transition-colors"
-            >
-              Virtual Try-On
             </Link>
 
 

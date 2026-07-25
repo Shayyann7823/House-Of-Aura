@@ -334,7 +334,7 @@ export function generateLook(
 
 
  explanation:
- `This HEEMIA look is curated for ${request.occasion}. 
+ `This House of Aura look is curated for ${request.occasion}. 
 The selected pieces are matched according to your style preference and budget.`
 
  };

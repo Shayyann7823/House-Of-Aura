@@ -113,7 +113,7 @@ export default function AuthPage() {
         <div className="relative h-full flex flex-col justify-between p-12 text-primary-foreground pointer-events-none">
           <Link href="/" className="group flex items-center gap-2 pointer-events-auto w-fit">
             <ArrowLeft className="h-4 w-4 text-primary-foreground/60 group-hover:text-gold group-hover:-translate-x-1 transition-all duration-300" />
-            <span className="text-display text-3xl">HEEMIA</span>
+            <span className="text-display text-3xl">House of Aura</span>
           </Link>
           <div className="anim-fade-up">
             <div className="text-xs uppercase tracking-[0.4em] text-gold/90">Members</div>
@@ -125,7 +125,7 @@ export default function AuthPage() {
             </p>
             <div className="mt-8 h-px w-24 bg-gold/60" />
           </div>
-          <div className="text-xs text-primary-foreground/50">© Heemia 2026</div>
+          <div className="text-xs text-primary-foreground/50">© House of Aura 2026</div>
         </div>
       </div>
       <div className="flex flex-col justify-center p-8 md:p-16 max-w-lg w-full mx-auto">

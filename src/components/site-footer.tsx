@@ -5,7 +5,7 @@ export function SiteFooter() {
     <footer className="mt-32 border-t border-border/60 bg-primary text-primary-foreground">
       <div className="mx-auto max-w-7xl px-4 md:px-8 py-16 grid md:grid-cols-4 gap-10">
         <div>
-          <div className="text-display text-3xl">HEEMIA</div>
+          <div className="text-display text-3xl">House of Aura</div>
           <p className="mt-3 text-sm opacity-70 leading-relaxed">
             Timeless Pakistani craft, modern silhouettes. Made with intention in Lahore, Karachi and Islamabad.
           </p>
@@ -31,7 +31,7 @@ export function SiteFooter() {
        
       </div>
       <div className="border-t border-primary-foreground/10 py-6 text-center text-xs opacity-60">
-  © {new Date().getFullYear()} Heemia. All rights reserved. 
+  © {new Date().getFullYear()} House of Aura. All rights reserved. 
 </div>
     </footer>
   );
