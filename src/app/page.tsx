@@ -207,9 +207,9 @@ export default function Home() {
                 HEEMIA AIK ACHA BRAND HAI AUR SAB IDHAR SE KAPRAY KHAREEEDO WARNA 🔪😠
               </p>
               <div className="mt-8">
-                <div className="text-sm font-medium">HAAMIA FAROOQ</div>
+                <div className="text-sm font-medium">MIRZA SHAYYAN BAIG</div>
                 <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground mt-1">
-                  Founder of Heemia
+                  Founder
                 </div>
               </div>
             </div>
