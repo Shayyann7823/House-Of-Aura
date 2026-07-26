@@ -10,13 +10,14 @@ type Ctx = {
   add: (p: Product, size?: string, qty?: number) => void;
   remove: (id: string, size?: string) => void;
   setQty: (id: string, qty: number, size?: string) => void;
+  setSize: (id: string, oldSize: string | undefined, newSize: string) => void;
   clear: () => void;
   count: number;
   subtotal: number;
 };
 
 const CartContext = createContext<Ctx | null>(null);
-const STORAGE_KEY = "House of Aura-cart-v2";
+const STORAGE_KEY = "heemia-cart-v2";
 
 // A cart line is unique per product id + size (same product, different size = separate line).
 const lineKey = (id: string, size?: string) => (size ? `${id}::${size}` : id);
@@ -59,6 +60,25 @@ export function CartProvider({ children }: { children: ReactNode }) {
             ? prev.filter((i) => lineKey(i.product.id, i.size) !== lineKey(id, size))
             : prev.map((i) => (lineKey(i.product.id, i.size) === lineKey(id, size) ? { ...i, qty } : i))
         ),
+      // Updates the size on an existing line. If another line for the same
+      // product+newSize already exists, merges quantities into it instead of
+      // creating a duplicate line.
+      setSize: (id, oldSize, newSize) =>
+        setItems((prev) => {
+          const currentKey = lineKey(id, oldSize);
+          const current = prev.find((i) => lineKey(i.product.id, i.size) === currentKey);
+          if (!current) return prev;
+
+          const newKey = lineKey(id, newSize);
+          const existing = prev.find((i) => i !== current && lineKey(i.product.id, i.size) === newKey);
+
+          if (existing) {
+            return prev
+              .map((i) => (i === existing ? { ...i, qty: i.qty + current.qty } : i))
+              .filter((i) => i !== current);
+          }
+          return prev.map((i) => (i === current ? { ...i, size: newSize } : i));
+        }),
       clear: () => setItems([]),
       count: items.reduce((s, i) => s + i.qty, 0),
       subtotal: items.reduce((s, i) => s + i.qty * i.product.price, 0),
