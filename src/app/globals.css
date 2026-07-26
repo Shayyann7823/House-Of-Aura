@@ -219,7 +219,7 @@ html {
   animation: float 6s ease-in-out infinite;
 }
 @utility anim-marquee {
-  animation: marquee 15s linear infinite;
+  animation: marquee 8s linear infinite;
 }
 @utility anim-splash-letter {
   animation: splashLetter 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
