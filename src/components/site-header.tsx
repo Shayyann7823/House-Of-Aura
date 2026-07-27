@@ -73,13 +73,12 @@ export function SiteHeader({ transparent = true }: { transparent?: boolean }) {
 
   return (
     <header
-      className={`${transparent ? "fixed" : "sticky"} top-0 inset-x-0 z-40 transition-all duration-300 ${
-        !transparent
+      className={`${transparent ? "fixed" : "sticky"} top-0 inset-x-0 z-40 transition-all duration-300 ${!transparent
           ? "border-b border-border/60 bg-background text-foreground"
           : isSolid
-          ? "top-2 mx-3 md:mx-6 rounded-full border border-border/60 bg-background/70 backdrop-blur-xl shadow-md text-foreground"
-          : "bg-transparent text-white [text-shadow:0_1px_4px_rgba(0,0,0,0.5)]"
-      }`}
+            ? "top-2 mx-3 md:mx-6 rounded-full border border-border/60 bg-background/70 backdrop-blur-xl shadow-md text-foreground"
+            : "bg-transparent text-white [text-shadow:0_1px_4px_rgba(0,0,0,0.5)]"
+        }`}
     >
 
       {!isSolid && (
@@ -270,11 +269,10 @@ export function SiteHeader({ transparent = true }: { transparent?: boolean }) {
       {!isHome && open && (
 
         <div
-          className={`md:hidden border-t anim-fade-in ${
-            isSolid
+          className={`md:hidden border-t anim-fade-in ${isSolid
               ? "border-border/60 bg-background text-foreground"
               : "border-white/15 bg-black/70 backdrop-blur-md text-white"
-          }`}
+            }`}
         >
 
           <nav className="flex flex-col p-4 gap-1">
@@ -295,15 +293,7 @@ export function SiteHeader({ transparent = true }: { transparent?: boolean }) {
 
 
 
-            {/* MOBILE VIRTUAL TRY ON */}
 
-            <Link
-              href="/try-on"
-              onClick={() => setOpen(false)}
-              className="py-2 text-sm border-b border-white/20"
-            >
-              Virtual Try-On
-            </Link>
 
 
 
