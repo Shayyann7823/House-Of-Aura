@@ -1,6 +1,6 @@
 # House of Aura 👔👗
 
-Full-stack clothing e-commerce platform for a Pakistani fashion brand ("House of Aura" / internally named Heemia). Built with Next.js 15 (App Router), TypeScript, and Prisma/PostgreSQL, with real authentication, order persistence, and an AI-powered stylist chatbot.
+Full-stack clothing e-commerce platform for a Pakistani fashion brand. Built with Next.js 15 (App Router), TypeScript, and Prisma/PostgreSQL, with real authentication, order persistence, and an AI-powered stylist chatbot.
 
 ## Features
 
