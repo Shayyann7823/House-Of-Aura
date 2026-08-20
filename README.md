@@ -102,8 +102,5 @@ npm run build
 npm start
 ```
 
-## License
-
-This project is provided as-is for demonstration purposes.
 
 > **NOTE:** Storefront, cart, and favorites are frontend-only (localStorage). Auth and orders are real, backed by a PostgreSQL database via Prisma. The AI stylist chatbot makes real calls to the Groq API.
