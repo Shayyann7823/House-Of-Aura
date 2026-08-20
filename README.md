@@ -65,7 +65,7 @@ Create a `.env.local` in the project root (no `.env.example` is included in the 
 | `JWT_SECRET`     | Recommended | Signs session JWTs. Falls back to an insecure dev default if unset — **must** be set in production |
 | `GROQ_API_KEY`   | Yes, for the chatbot | Groq API key; without it `/api/chat` returns an error   |
 
-> `@fal-ai/client` is listed in `package.json` but is not currently used anywhere in the codebase — no `FAL_*` key is needed.
+
 
 ## Getting Started
 
